@@ -39,11 +39,17 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 ### Goals
 
-- _Lorem ipsum, dolor sit amet,_
-- _consectetur adipiscing elit._
-- _Phasellus dapibus fermentum risus vitae bibendum._
-- _Integer vel ipsum mollis odio sollicitudin ornare eu vel ex._
-- _etc._
+- Have user accounts
+- Have game postings created by users
+- Full CRUD on the user postings
+- Comment sections on each game posting
+- Full CrUD on comments
+- 8 + separate componenets in organized file structure.
+- state and props used in React Components
+- Ruby on Rails backend
+- React front end
+- attractive styling using flexbox and/or grid
+- 2 media queries in css for 3 screen sizes
 
 <br>
 
@@ -51,13 +57,12 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 > Use this section to list all supporting libraries and dependencies, and their role in the project. Below is an example - this needs to be replaced!
 
-|     Library      | Description                                                              |
-| :--------------: | :----------------------------------------------------------------------- |
-|      React       | Front end framework and user interface                                   |
-|   React Router   | _For users to navigate through different pages depending on their needs_ |
-| React SemanticUI | _Lorem ipsum dolor sit amet, consectetur._                               |
-|       Ruby       | _Lorem ipsum dolor sit amet, consectetur._                               |
-|  Ruby on Rails   | Back end framework                                                       |
+|    Library    | Description                                                              |
+| :-----------: | :----------------------------------------------------------------------- |
+|     React     | Front end framework and user interface                                   |
+| React Router  | _For users to navigate through different pages depending on their needs_ |
+|     Ruby      | _Lorem ipsum dolor sit amet, consectetur._                               |
+| Ruby on Rails | Back end framework                                                       |
 
 <br>
 
@@ -119,11 +124,23 @@ src
 
 > Use this section to estimate the time necessary to build out each of the components you've described above.
 
-| Task                | Priority | Estimated Time | Time Invested | Actual Time |
-| ------------------- | :------: | :------------: | :-----------: | :---------: |
-| Add Contact Form    |    L     |     3 hrs      |     2 hrs     |    3 hrs    |
-| Create CRUD Actions |    H     |     3 hrs      |     1 hrs     |     TBD     |
-| TOTAL               |          |     6 hrs      |     3 hrs     |     TBD     |
+| Task                   | Priority | Estimated Time | Time Invested | Actual Time |
+| ---------------------- | :------: | :------------: | :-----------: | :---------: |
+| User backend auth      |    H     |     3 hrs      |      hrs      |     TBD     |
+| Postings Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
+| comments Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
+| Postings Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
+| edit controllers       |    H     |     2 hrs      |      hrs      |     TBD     |
+| edit models            |    H     |     1 hrs      |      hrs      |     TBD     |
+| backend testing        |    H     |     3 hrs      |      hrs      |     TBD     |
+| set up front end files |    H     |     2 hrs      |      hrs      |     TBD     |
+| services               |    H     |     2 hrs      |      hrs      |     TBD     |
+| UI components          |    H     |     2 hrs      |      hrs      |     TBD     |
+| User components        |    H     |     6 hrs      |      hrs      |     TBD     |
+| Posting components     |    H     |     6 hrs      |      hrs      |     TBD     |
+| comment components     |    H     |     6 hrs      |      hrs      |     TBD     |
+| styling                |    H     |     10 hrs     |      hrs      |     TBD     |
+| TOTAL                  |          |     40 hrs     |      hrs      |     TBD     |
 
 > _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
 
