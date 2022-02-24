@@ -62,7 +62,7 @@
 
 #### Wireframes
 
-![Wireframe](https://whimsical.com/partyfinderwireframe-ADUhddMNV8MbeHC3zoTs5N)
+[Wireframe](https://whimsical.com/partyfinderwireframe-ADUhddMNV8MbeHC3zoTs5N)
 
 #### Component Tree
 
