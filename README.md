@@ -2,10 +2,6 @@
 
 # PROJECT 4 README <!-- omit in toc -->
 
-> The Project Planning section **should be completed** for your project pitch with instructors.
->
-> To ensure correct Markdown, copy and paste the raw template code into your project repo README file. Remove ALL template instructions and replace with your project details.
-
 - [Overview](#overview)
 - [MVP](#mvp)
   - [Goals](#goals)
@@ -30,10 +26,6 @@
 <br>
 
 ## MVP
-
-> The Minimum Viable Product should be a well-planned, easily-communicated product, ensuring that the client's deliverable will be achievable and meet specifications within the time frame estimated.
-
-_The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus dapibus fermentum risus vitae bibendum. Integer vel ipsum mollis odio sollicitudin ornare eu vel ex. In quis fringilla velit, ac maximus quam. Etiam eget placerat neque. Aenean faucibus sem non nisi lobortis ullamcorper._
 
 <br>
 
@@ -61,7 +53,7 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 | :-----------: | :----------------------------------------------------------------------- |
 |     React     | Front end framework and user interface                                   |
 | React Router  | _For users to navigate through different pages depending on their needs_ |
-|     Ruby      | _Lorem ipsum dolor sit amet, consectetur._                               |
+|     Ruby      | _Backend Language_                                                       |
 | Ruby on Rails | Back end framework                                                       |
 
 <br>
@@ -70,41 +62,13 @@ _The **Project Title** MVP lorem ipsum dolor sit amet, consectetur adipiscing el
 
 #### Wireframes
 
-> Use the Wireframes section to display desktop, tablet and mobile views. No hand-drawn wireframes. Use a tool like wireframe.cc, Whimsical or AdobeXD
-
-![Dummy Link](url)
-
-- Desktop Landing
-
-![Dummy Link](url)
-
-- Desktop Hero
-
-![Dummy Link](url)
-
-- Resource Index
-
-![Dummy Link](url)
-
-- Resource Show
-
-![Dummy Link](url)
-
-- Tablet Resource Index
-
-![Dummy Link](url)
-
-- Mobile Resource Index
+![Wireframe](https://whimsical.com/partyfinderwireframe-ADUhddMNV8MbeHC3zoTs5N)
 
 #### Component Tree
 
-> Use this section to display the structure of how your React components are being rendered. This should show the parent to child relation between you components. In other words, show which components are rendering the other components. Include a link to your component tree
-
-[Component Tree Sample](https://gist.git.generalassemb.ly/davidtwhitlatch/414107e2560ae0bb65e233570f2fe056#file-component-tree-png)
+[Component Tree Sample](https://whimsical.com/QSZ7z2ZJchyioBMB2ifiFL)
 
 #### Component Architecture
-
-> Use this section to define your React components and the data architecture of your app. This should be a reflection of how you expect your directory/file tree to look like.
 
 ```structure
 
@@ -115,14 +79,53 @@ src
       |__ images
       |__ mockups
 |__ components/
-      |__ Header.jsx
+      |__ Card
+            |__Card.jsx
+            |__Card.css
+      |__UI
+          |__Layout
+              |__Layout.jsx
+              |__Layout.css
+          |__NavBar
+              |__NavBar.jsx
+              |__NavBar.css
+          |__Footer
+              |__Footer.jsx
+              |__Footer.css
+      |__User
+          |__Login.jsx
+          |__Login.css
+          |__Register.jsx
+          |__Register.css
+          |__UserDetail.jsx
+          |__UserDetail.css
+      |__Post
+          |__PostCreate.jsx
+          |__PostEdit.jsx
+          |_PostDetail.jsx
+      |__Comment
+          |__CommentCreate.jsx
+          |__CommentEdit.jsx
+          |__CommentDetail.jsx
+      |__Home
+          |__Home.jsx
+          |__Home.css
+|__Containers
+    |__PostContainer.jsx
+    |__PostContainer.css
+    |__CommentContainer.jsx
+    |__CommentContainer.css
+
 |__ services/
+      |__api-helper.js
+      |__user.js
+      |__post.js
+      |__comment.js
+
 
 ```
 
 #### Time Estimates
-
-> Use this section to estimate the time necessary to build out each of the components you've described above.
 
 | Task                   | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------- | :------: | :------------: | :-----------: | :---------: |
@@ -142,24 +145,26 @@ src
 | styling                |    H     |     10 hrs     |      hrs      |     TBD     |
 | TOTAL                  |          |     40 hrs     |      hrs      |     TBD     |
 
-> _Why is this necessary? Time frames are key to the development cycle. You have limited time to code your app, and your estimates can then be used to evaluate possibilities of your MVP and post-MVP based on time needed. It's best you assume an additional hour for each component, as well as a few hours added to the total time, to play it safe._
-
 <br>
 
 ### Server (Back End)
 
 #### ERD Model
 
-> Use this section to display an image of a computer generated ERD model. You can use draw.io, Lucidchart or another ERD tool.
-
-[ERD Sample](https://drive.google.com/file/d/1kLyQTZqfcA4jjKWQexfEkG2UspyclK8Q/view)
+[ERD Sample](https://drive.google.com/file/d/1OSDzk44m8d815enL7F-ZakG18HFLpBBy/view?usp=sharing)
 <br>
 
 ---
 
 ## Post-MVP
 
-> Use this section to document ideas you've had that would be fun (or necessary) for your Post-MVP. This will be helpful when you return to your project after graduation!
+- Add a rating/review for GMs
+- different types of user accounts: players and game masters
+- Formal sign up system - sends email/message to GM user account
+- A way to show how many seats for a game are available that dynamically updates as people sign up
+- Filter settings so users can filter parties by what days and times they are available
+- Featured games section
+- Guest login for potential future employers
 
 ---
 
