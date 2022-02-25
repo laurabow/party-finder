@@ -10,7 +10,8 @@ export default function NavBar(props) {
       <div>
         {props.currentUser ?
         <>
-        <h4>Welcome, {props.currentUser.username}!</h4>
+            <h4>Welcome, {props.currentUser.username}!</h4>
+        <Link to='/posts'>Find a Party!</Link>
         <button onClick={props.logout}>Logout</button>
           </>
           :
