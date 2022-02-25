@@ -1,7 +1,13 @@
 import React from 'react'
+import { Link } from "react-router-dom";
 
-export default function NavBar() {
+export default function () {
   return (
-    <div>NavBar</div>
+    <div>
+      <h1>Party Finder</h1>
+      <div>
+        current user stuff
+      </div>
+    </div>
   )
 }
