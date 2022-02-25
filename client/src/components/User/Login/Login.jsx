@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../../services/user';
 
 
-export default function Login() {
+export default function Login(props) {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -12,7 +12,18 @@ export default function Login() {
 
   return (
     <div>
-      <form>
+      <form onSubmit={
+        async (e) => {
+          e.preventDefault()
+          const user = {
+            username,
+            password
+          }
+          const resp = await loginUser(user)
+          props.setCurrentUser(resp)
+          navigate('/');
+        }
+      }>
         <label>Username</label>
         <input
           required
@@ -23,6 +34,7 @@ export default function Login() {
         />
         <label>Password</label>
         <input
+          required
           type="password"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
