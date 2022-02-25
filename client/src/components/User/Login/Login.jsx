@@ -12,8 +12,7 @@ export default function Login(props) {
 
   return (
     <div>
-      <form onSubmit={
-        async (e) => {
+      <form onSubmit={async (e) => {
           e.preventDefault()
           const user = {
             username,
