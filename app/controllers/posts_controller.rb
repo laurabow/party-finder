@@ -1,5 +1,6 @@
 class PostsController < ApplicationController
   before_action :set_post, only: %i[ show update destroy ]
+  before_action :authorize_request, only: [:create, :update, :destroy, :get_user_posts]
 
   # GET /posts
   def index
@@ -8,14 +9,21 @@ class PostsController < ApplicationController
     render json: @posts
   end
 
+  # GET /users/:user_id/posts (find a specific user's posts)
+  def get_user_posts
+    @user = User.find(params[:user_id])
+    render json: @user.posts
+  end
+
   # GET /posts/1
   def show
-    render json: @post
+    render json: @post, include: :comments
   end
 
   # POST /posts
   def create
     @post = Post.new(post_params)
+    @posts.user = @current_user
 
     if @post.save
       render json: @post, status: :created, location: @post
@@ -36,6 +44,7 @@ class PostsController < ApplicationController
   # DELETE /posts/1
   def destroy
     @post.destroy
+    render json: @post
   end
 
   private
