@@ -3,6 +3,7 @@ import { useParams, Link } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
+import { createComment, deleteComment, getPostComments } from '../../services/comments';
 // import comment stuff
 
 export default function PostDetail() {
@@ -16,11 +17,23 @@ export default function PostDetail() {
     const foundPost = props.post.find(post => {
       return post.id === parseInt(id)
     })
-    
-  }, [id, props.posts])
+    const fetchComments = async () => {
+      const comments = await getPostComments(id);
+      setComments(comments);
+    }
+    fetchComments();
+    setPost(foundPost);
+  }, [id, props.posts, toggle]);
 
-  // comment create
-  // comment delete
+  const handleCommentCreate = async (formData) => {
+    await createComment(id, comment_id)
+    setToggle(prevToggle => !prevToggle)
+  }
+
+  handleCommentDelete = async (comment_id) => {
+    await deleteComment(id, comment_id)
+    setToggle(prevToggle => !prevToggle)
+  }
 
   return (
     <div>
