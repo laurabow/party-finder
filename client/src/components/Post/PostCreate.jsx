@@ -4,13 +4,17 @@ import { useState } from 'react';
 let days = [
 	{ day: "Sunday", key: "SUN" },
 	{ day: "Monday", key: "MON" },
-	{ day: "Tuesday", key: "TUES" }
+  { day: "Tuesday", key: "TUES" },
+  { day: "Wednesday", key: "WED" },
+  { day: "Thursday", key: "THUR" },
+  { day: "Friday", key: "FRI" },
+  { day: "Saturday", key: "SAT" }
 ];
 
 export default function PostCreate() {
 
   const [title, setTitle] = useState('');
-  const [gameSystem, setGameSystem] = useState('')
+  const [game_system, setGameSystem] = useState('')
   const [day, setDay] = useState("Select a Day");
   // const [time, setTime] = useState() // what state is time?
   const [description, setDescription] = useState('')
@@ -35,7 +39,7 @@ export default function PostCreate() {
         <input
           required
           type="text"
-          value={gameSystem}
+          value={game_system}
           placeholder="Dungeons and Dragons"
           onChange={(e) => setGameSystem(e.target.value)}
         />
