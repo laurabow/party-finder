@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../../services/user';
+import Layout from '../../UI/Layout/Layout';
 
 
 export default function Login(props) {
@@ -11,35 +12,37 @@ export default function Login(props) {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <form onSubmit={async (e) => {
-          e.preventDefault()
-          const user = {
-            username,
-            password
+    <Layout>
+      <div>
+        <form onSubmit={async (e) => {
+            e.preventDefault()
+            const user = {
+              username,
+              password
+            }
+            const resp = await loginUser(user)
+            props.setCurrentUser(resp)
+            navigate('/posts');
           }
-          const resp = await loginUser(user)
-          props.setCurrentUser(resp)
-          navigate('/');
-        }
-      }>
-        <label>Username</label>
-        <input
-          required
-          autoFocus
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label>Password</label>
-        <input
-          required
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button>Login</button>
-      </form>
-    </div>
+        }>
+          <label>Username</label>
+          <input
+            required
+            autoFocus
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label>Password</label>
+          <input
+            required
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button>Login</button>
+        </form>
+      </div>
+    </Layout>
   )
 }

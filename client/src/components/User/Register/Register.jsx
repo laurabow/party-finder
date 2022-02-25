@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { registerUser } from '../../../services/user';
 import { useNavigate } from 'react-router-dom';
+import Layout from '../../UI/Layout/Layout';
 
 export default function Register(props) {
 
@@ -11,43 +12,45 @@ export default function Register(props) {
   const navigate = useNavigate();
 
   return (
-    <div>
-      <form onSubmit={async (e) => {
-          e.preventDefault()
-          const user = {
-            username,
-            email,
-            password
+    <Layout>
+      <div>
+        <form onSubmit={async (e) => {
+            e.preventDefault()
+            const user = {
+              username,
+              email,
+              password
+            }
+          const resp = await registerUser(user)
+          props.setCurrentUser(resp)
+          navigate('/posts')
           }
-        const resp = await registerUser(user)
-        props.setCurrentUser(resp)
-        navigate('/')
-        }
-      }>
-        <label>Username</label>
-        <input
-          required
-          autoFocus
-          type="text"
-          value={username}
-          onChange={(e) => setUsername(e.target.value)}
-        />
-        <label>Email</label>
-        <input
-          required
-          type="text"
-          value={email}
-          onChange={(e) => setEmail(e.target.value)}
-        />
-        <label>Password</label>
-        <input
-          required
-          type="password"
-          value={password}
-          onChange={(e) => setPassword(e.target.value)}
-        />
-        <button>Register</button>
-      </form>
-    </div>
+        }>
+          <label>Username</label>
+          <input
+            required
+            autoFocus
+            type="text"
+            value={username}
+            onChange={(e) => setUsername(e.target.value)}
+          />
+          <label>Email</label>
+          <input
+            required
+            type="text"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+          />
+          <label>Password</label>
+          <input
+            required
+            type="password"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+          />
+          <button>Register</button>
+        </form>
+      </div>
+    </Layout>
   )
 }
