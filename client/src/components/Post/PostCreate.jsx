@@ -23,7 +23,6 @@ export default function PostCreate() {
     setDay(e.target.value);
   };
 
-
   return (
     <div>
       <form onSubmit={(e) => {
@@ -74,6 +73,7 @@ export default function PostCreate() {
           onChange={(e) => setDescription(e.target.value)}
         />
       </form>
+      <button>Create Party Post</button>
     </div>
   )
 }
