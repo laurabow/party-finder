@@ -4,10 +4,17 @@
 
 .homepage-title {
   color: aliceblue;
+  margin-top: 0px;
+  padding: 30px;
 }
 
-.hompage-intro {
-  background-color: aliceblue;
+/* this isn't applying style?? */
+.homepage-intro {
+  background-color: rgb(240, 248, 255, 0.8);
+  border-radius: 8px;
+  margin: 50px 100px 50px 100px;
+  padding: 5px 10px 5px 10px;
+  box-shadow: 2px 2px 5px;
 }
 
 .homepage-findparty {

@@ -4,6 +4,18 @@
   background-color: rgb(104, 103, 103);
 }
 
+.party-finder {
+  display: flex;
+}
+
+.logo {
+  display: flex;
+}
+
+.dice {
+  margin-top: 25px;
+}
+
 .welcome-buttons {
   display: flex;
   align-items: center;

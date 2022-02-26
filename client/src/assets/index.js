@@ -1,0 +1,1 @@
+export const D20 = require('./image/redD20.png');
