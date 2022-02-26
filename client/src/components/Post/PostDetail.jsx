@@ -4,7 +4,7 @@ import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
 import { createComment, deleteComment, getPostComments } from '../../services/comments';
-// import comment stuff
+
 
 export default function PostDetail(props) {
 
