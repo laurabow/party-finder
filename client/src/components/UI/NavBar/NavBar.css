@@ -1,0 +1,10 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: rgb(104, 103, 103);
+}
+
+.welcome-buttons {
+  display: flex;
+  align-items: center;
+}
