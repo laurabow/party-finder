@@ -42,6 +42,7 @@ export default function PostDetail(props) {
   }
 
   return (
+    
     <div>
       {
         post?.id ?

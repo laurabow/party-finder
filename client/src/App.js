@@ -33,7 +33,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path='/register' element={<Register setCurrentUser={setCurrentUser}/>} />
         <Route path='/login' element={<Login setCurrentUser={setCurrentUser}/>} />
-        <Route path='posts/*' element={<PostContainer setCurrentUser={setCurrentUser}/>} />
+        <Route path='posts/*' element={<PostContainer currentUser={currentUser}/>} />
       </Routes>
     </div>
   );
