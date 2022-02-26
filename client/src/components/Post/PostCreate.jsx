@@ -23,9 +23,20 @@ export default function PostCreate() {
     setDay(e.target.value);
   };
 
+
   return (
     <div>
-      <form>
+      <form onSubmit={(e) => {
+        e.preventDefault()
+        const post = {
+          title,
+          game_system,
+          day,
+          // time,
+          description
+        }
+        props.handleCreate(post);
+      }}>
         <label>Party Name</label>
         <input
           required
