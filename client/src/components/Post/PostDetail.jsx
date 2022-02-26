@@ -57,7 +57,7 @@ export default function PostDetail() {
               null
             }
             <CommentCreate handleCommentCreate={handleCommentCreate}/>
-            <Reviews
+            <Comments
               comments={comments}
               currentUser={props.currentUser}
               handleCommentDelete={handleCommentDelete}
