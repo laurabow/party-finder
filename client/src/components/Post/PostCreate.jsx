@@ -11,7 +11,7 @@ let days = [
   { day: "Saturday", key: "SAT" }
 ];
 
-export default function PostCreate() {
+export default function PostCreate(props) {
 
   const [title, setTitle] = useState('');
   const [game_system, setGameSystem] = useState('')

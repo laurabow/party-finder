@@ -12,7 +12,7 @@ let days = [
   { day: "Saturday", key: "SAT" }
 ];
 
-export default function PostEdit() {
+export default function PostEdit(props) {
 
   const [title, setTitle] = useState('');
   const [game_system, setGameSystem] = useState('');
@@ -34,6 +34,10 @@ export default function PostEdit() {
       setDescription(foundPost?.description)
     }
   }, [id, props.posts]);
+
+  const handleDateChange = e => {
+    setDay(e.target.value);
+  };
 
 
   return (

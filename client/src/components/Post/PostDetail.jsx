@@ -6,7 +6,7 @@ import CommentEdit from '../Comment/CommentEdit';
 import { createComment, deleteComment, getPostComments } from '../../services/comments';
 // import comment stuff
 
-export default function PostDetail() {
+export default function PostDetail(props) {
 
   const [post, setPost] = useState({});
   const [comments, setComments] = useState([]);
@@ -51,7 +51,7 @@ export default function PostDetail() {
                   <Link to={`/posts/${post.id}/edit`}>
                     <button>Edit</button>
                   </Link>
-                <button onClick={() => props.handleDelete(product.id)}>Delete</button>
+                <button onClick={() => props.handleDelete(post.id)}>Delete</button>
               </>
               :
               null
