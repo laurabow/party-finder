@@ -6,7 +6,7 @@ import Posts from '../components/Post/Posts';
 import PostCreate from '../components/Post/PostCreate';
 import PostEdit from '../components/Post/PostEdit';
 
-export default function PostContainer() {
+export default function PostContainer(props) {
 
   const [posts, setPosts] = useState([]);
   const [toggle, setToggle] = useState(false);
@@ -40,7 +40,20 @@ export default function PostContainer() {
   
   return (
     <div>
-      
+      <Routes>
+        <Route path='/' element={
+          <Posts posts={posts} currentUser={props.currentUser} />
+        } />
+        <Route path='/:id' element={
+          <PostDetail posts={posts} currentUser={props.currentUser} handleDelete={handleDelete} />
+        } />
+        <Route path='/create' element={
+          <PostCreate handleCreate={handleCreate} />
+        } />
+        <Route path='/:id/edit' element={
+          <PostEdit posts={posts} handleEdit={handleEdit} />
+        } />
+      </Routes>
     </div>
   )
 }

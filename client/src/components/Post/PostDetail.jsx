@@ -23,7 +23,7 @@ export default function PostDetail(props) {
     }
     fetchComments();
     setPost(foundPost);
-  }, [id, props.posts, toggle]);
+  }, [id, props.post, toggle]);
 
   const handleCommentCreate = async (formData) => {
     await createComment(id, comment_id)
