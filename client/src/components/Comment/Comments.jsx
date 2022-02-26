@@ -14,7 +14,7 @@ export default function Comments(props) {
                 <div>
                   <button>Edit</button>
                   <button
-                    onClick={() => props.handlecommentDelete(comment.id)}>
+                    onClick={() => props.handleCommentDelete(comment.id)}>
                     Delete
                   </button>
                 </div>

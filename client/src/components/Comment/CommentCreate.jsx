@@ -21,12 +21,14 @@ export default function CommentCreate(props) {
           autoFocus
           type="text"
           value={title}
+          placeholder="Title your comment"
           onChange={(e) => setTitle(e.target.value)}
         />
         <textarea
           required
           type="text"
           value={content}
+          placeholder="Comment content"
           onChange={(e) => setContent(e.target.value)}
         />
         <button>Comment</button>

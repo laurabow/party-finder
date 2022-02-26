@@ -58,14 +58,12 @@ export default function PostEdit(props) {
           autoFocus
           type="text"
           value={title}
-          placeholder="Name your Party!"
           onChange={(e) => setTitle(e.target.value)}
         />
         <label>Game System</label>
         <input
           type="text"
           value={game_system}
-          placeholder="Dungeons and Dragons"
           onChange={(e) => setGameSystem(e.target.value)}
         />
         <label>Day</label>
@@ -83,7 +81,6 @@ export default function PostEdit(props) {
         <textarea
           type="text"
           value={description}
-          placeholder="Describe your game and party"
           onChange={(e) => setDescription(e.target.value)}
         />
         <button>Update</button>

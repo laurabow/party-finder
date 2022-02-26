@@ -1,9 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link } from 'react-router-dom';
+import { useParams, Link, Navigate } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
-import { createComment, deleteComment, getPostComments } from '../../services/comments';
+import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
 
 
 export default function PostDetail(props) {
@@ -14,7 +14,7 @@ export default function PostDetail(props) {
   const { id } = useParams();
 
   useEffect(() => {
-    const foundPost = props.post.find(post => {
+    const foundPost = props.posts.find(post => {
       return post.id === parseInt(id)
     })
     const fetchComments = async () => {
@@ -26,11 +26,17 @@ export default function PostDetail(props) {
   }, [id, props.post, toggle]);
 
   const handleCommentCreate = async (formData) => {
-    await createComment(id, comment_id)
+    await createComment(id, formData)
     setToggle(prevToggle => !prevToggle)
   }
 
-  handleCommentDelete = async (comment_id) => {
+  const handleCommentEdit = async (id, formData) => {
+    await updateComment(id, formData)
+    setToggle(prevToggle => !prevToggle)
+    Navigate(`/posts/${id}/comments/${id}`)
+  }
+
+  const handleCommentDelete = async (comment_id) => {
     await deleteComment(id, comment_id)
     setToggle(prevToggle => !prevToggle)
   }
