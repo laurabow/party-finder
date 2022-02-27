@@ -6,9 +6,10 @@ import { Link } from 'react-router-dom';
 export default function Posts(props) {
   return (
     <div>
+      <h1>Find a Party!</h1>
       {
         props.currentUser &&
-        <Link to='/posts/create'>Create a Party!</Link>
+        <Link to='/posts/create'><button>Create a Party!</button></Link>
       }
       {
         props.posts.map(post => (

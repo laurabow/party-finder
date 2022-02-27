@@ -51,7 +51,18 @@ export default function PostDetail(props) {
             <h3>{post.game_system}</h3>
             <h3>{post.day} at TIME</h3>
             <p>{post.description}</p>
-
+            {
+              props.currentUser?.id === post.user_id ?
+              <>
+                <CommentCreate handleCommentCreate={handleCommentCreate}/>
+              </>
+                :
+                <div>
+                  <p>Login to leave a comment!</p>
+                  <Link to='/login'><button>Login</button></Link>
+                  <Link to='/register'><button>Register</button></Link>
+                </div>
+            }
             {
               props.currentUser?.id === post.user_id ?
               <>
@@ -63,7 +74,6 @@ export default function PostDetail(props) {
               :
               null
             }
-            <CommentCreate handleCommentCreate={handleCommentCreate}/>
             <Comments
               comments={comments}
               currentUser={props.currentUser}

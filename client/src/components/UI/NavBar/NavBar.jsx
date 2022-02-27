@@ -24,6 +24,7 @@ export default function NavBar(props) {
           </div>
           :
           <>
+            <Link to='/posts'><button>Find a Party!</button></Link>
             <Link to='/login'>Login</Link>
             <Link to='/register'>Register</Link>
           </>
