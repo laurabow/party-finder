@@ -18,27 +18,29 @@ export default function CommentEdit(props) {
   }, [id, props.comments]);
 
   return (
-    <div><form onSubmit={(e) => {
-      e.preventDefault();
-      const comment = {
-        title,
-        content
-      }
-      props.handleCommentEdit(id, comment)
-    }}>
-      <label>Title</label>
-      <input
-        autoFocus
-        type="text"
-        value={title}
-        onChange={(e) => setTitle(e.target.value)}
-      />
-      <textarea
-        type="text"
-        value={content}
-        onChange={(e) => setContent(e.target.value)}
-      />
-      <button>Edit Comment</button>
-    </form></div>
+    <div>
+      <form onSubmit={(e) => {
+        e.preventDefault();
+        const comment = {
+          title,
+          content
+        }
+        props.handleCommentEdit(id, comment)
+      }}>
+        <label>Title</label>
+        <input
+          autoFocus
+          type="text"
+          value={title}
+          onChange={(e) => setTitle(e.target.value)}
+        />
+        <textarea
+          type="text"
+          value={content}
+          onChange={(e) => setContent(e.target.value)}
+        />
+        <button>Edit Comment</button>
+      </form>
+    </div>
   )
 }

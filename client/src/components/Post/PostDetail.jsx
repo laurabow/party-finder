@@ -64,7 +64,7 @@ export default function PostDetail(props) {
               null
             }
             {
-              props.currentUser?.id === post.user_id ?
+              props.currentUser?.id ?
               <>
                 <CommentCreate handleCommentCreate={handleCommentCreate}/>
               </>
