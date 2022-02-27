@@ -129,15 +129,14 @@ src
 
 | Task                   | Priority | Estimated Time | Time Invested | Actual Time |
 | ---------------------- | :------: | :------------: | :-----------: | :---------: |
-| User backend auth      |    H     |     3 hrs      |      hrs      |     TBD     |
-| Postings Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
-| comments Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
-| Postings Backend       |    H     |     1 hrs      |      hrs      |     TBD     |
-| edit controllers       |    H     |     2 hrs      |      hrs      |     TBD     |
-| edit models            |    H     |     1 hrs      |      hrs      |     TBD     |
-| backend testing        |    H     |     3 hrs      |      hrs      |     TBD     |
-| set up front end files |    H     |     2 hrs      |      hrs      |     TBD     |
-| services               |    H     |     2 hrs      |      hrs      |     TBD     |
+| User backend auth      |    H     |     3 hrs      |     2hrs      |     TBD     |
+| Postings Backend       |    H     |     1 hrs      |     2hrs      |     TBD     |
+| comments Backend       |    H     |     1 hrs      |     2hrs      |     TBD     |
+| edit controllers       |    H     |     2 hrs      |     1hrs      |     TBD     |
+| edit models            |    H     |     1 hrs      |     1hrs      |     TBD     |
+| backend testing        |    H     |     3 hrs      |     2hrs      |     TBD     |
+| set up front end files |    H     |     2 hrs      |     1hrs      |     TBD     |
+| services               |    H     |     2 hrs      |     1hrs      |     TBD     |
 | UI components          |    H     |     2 hrs      |      hrs      |     TBD     |
 | User components        |    H     |     6 hrs      |      hrs      |     TBD     |
 | Posting components     |    H     |     6 hrs      |      hrs      |     TBD     |
