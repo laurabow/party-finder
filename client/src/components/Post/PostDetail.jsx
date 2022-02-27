@@ -79,6 +79,7 @@ export default function PostDetail(props) {
               comments={comments}
               currentUser={props.currentUser}
               handleCommentDelete={handleCommentDelete}
+              handleCommentEdit={handleCommentEdit}
             />
           </>
           :

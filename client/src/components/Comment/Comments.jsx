@@ -1,5 +1,6 @@
 import React from 'react'
 import Layout from '../UI/Layout/Layout';
+import CommentEdit from './CommentEdit';
 
 export default function Comments(props) {
   console.log(props.comments)
