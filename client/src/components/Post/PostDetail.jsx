@@ -51,6 +51,18 @@ export default function PostDetail(props) {
             <h3>{post.game_system}</h3>
             <h3>{post.day} at TIME</h3>
             <p>{post.description}</p>
+            
+            {
+              props.currentUser?.id === post.user_id ?
+              <>
+                  <Link to={`/posts/${post.id}/edit`}>
+                    <button>Edit</button>
+                  </Link>
+                <button onClick={() => props.handleDelete(post.id)}>Delete</button>
+              </>
+              :
+              null
+            }
             {
               props.currentUser?.id === post.user_id ?
               <>
@@ -62,17 +74,6 @@ export default function PostDetail(props) {
                   <Link to='/login'><button>Login</button></Link>
                   <Link to='/register'><button>Register</button></Link>
                 </div>
-            }
-            {
-              props.currentUser?.id === post.user_id ?
-              <>
-                  <Link to={`/posts/${post.id}/edit`}>
-                    <button>Edit</button>
-                  </Link>
-                <button onClick={() => props.handleDelete(post.id)}>Delete</button>
-              </>
-              :
-              null
             }
             <Comments
               comments={comments}
