@@ -34,7 +34,7 @@ export default function CommentCreate(props) {
           placeholder="Comment content"
           onChange={(e) => setContent(e.target.value)}
         />
-        <button>Comment</button>
+        <button className='leave-comment-btn'>Comment</button>
       </form>
     </div>
   )

@@ -20,3 +20,11 @@
 .com-create-content-label {
   color: aliceblue;
 }
+
+.leave-comment-btn {
+  margin: 10px 110px 10px 110px;
+  padding: 5px;
+  border-radius: 8px;
+  background-color: rgb(3, 129, 240);
+  color: aliceblue;
+}
