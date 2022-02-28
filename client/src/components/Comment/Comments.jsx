@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
 import CommentEdit from './CommentEdit';
 
@@ -16,7 +17,9 @@ export default function Comments(props) {
               {
                 props.currentUser?.id === comment.user_id ?
                   <div>
-                    <button>Edit</button>
+                    <Link to={`/comments/${comment.id}/edit`}>
+                      <button>Edit</button>
+                    </Link>
                     <button
                       onClick={() => props.handleCommentDelete(comment.id)}>
                       Delete
