@@ -1,17 +1,13 @@
 import React from 'react'
-// import moment from 'moment';
 import './Home.css'
 import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
 import PostContainer from '../../containers/PostContainer';
-// import Posts from '../Post/Posts';
+
 
 
 export default function Home(props) {
 
-  // const getPostMoment = (post) => {
-  //   return `${post.day}'s at ${moment(post.time.substring(0, 19)).format('LT')}`
-  // }
 
   return (
     <Layout>

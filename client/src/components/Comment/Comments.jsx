@@ -6,7 +6,7 @@ import CommentEdit from './CommentEdit';
 export default function Comments(props) {
   console.log(props.comments)
   return (
-    <Layout>
+
       <div>
         {props.comments &&
           props.comments.map(comment => (
@@ -16,7 +16,7 @@ export default function Comments(props) {
               <p>{comment.content}</p>
               {
                 props.currentUser?.id === comment.user_id ?
-                  <div>
+                  <div className='post-detail-btns'>
                     {/* <Link to={`/comments/${comment.id}/edit`}> */}
                       {/* <button>Edit</button> */}
                     {/* </Link> */}
@@ -32,6 +32,6 @@ export default function Comments(props) {
           ))
         }
       </div>
-    </Layout>
+
   )
 }

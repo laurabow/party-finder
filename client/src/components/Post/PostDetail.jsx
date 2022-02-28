@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
+import Layout from '../UI/Layout/Layout';
 // import CommentEdit from '../Comment/CommentEdit';
 // import PageNotFound from '../404/PageNotFound';
 import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
@@ -53,55 +54,55 @@ export default function PostDetail(props) {
   }
 
   return (
-    
-    <div>
-      {
-        post?.id ?
-          <>
-            <div className='post-detail-card'>
-              <h2>{post.title}</h2>
-              <h3>user: {post.user_id}</h3>
-              <h3>{post.game_system}</h3>
-              <h3>{getPostMoment(post)}</h3>
-              <p>{post.description}</p>
-            </div>
-            {
-              props.currentUser?.id === post.user_id ?
-              <>
-                  <Link to={`/posts/${post.id}/edit`}>
-                    <button>Edit</button>
-                  </Link>
-                <button onClick={() => props.handleDelete(post.id)}>Delete</button>
-              </>
-              :
-              null
-            }
-            {
-              props.currentUser?.id ?
-              <>
-                <CommentCreate handleCommentCreate={handleCommentCreate}/>
-              </>
+    <Layout>
+      <div className='post-detail'>
+        {
+          post?.id ?
+            <>
+              <div className='post-detail-card'>
+                <h2>{post.title}</h2>
+                <h3>user: {post.user_id}</h3>
+                <h3>{post.game_system}</h3>
+                <h3>{getPostMoment(post)}</h3>
+                <p>{post.description}</p>
+              </div>
+              {
+                props.currentUser?.id === post.user_id ?
+                <>
+                    <Link to={`/posts/${post.id}/edit`}>
+                      <button>Edit</button>
+                    </Link>
+                  <button onClick={() => props.handleDelete(post.id)}>Delete</button>
+                </>
                 :
-                <div>
-                  <p>Login to leave a comment!</p>
-                  <Link to='/login'><button>Login</button></Link>
-                  <Link to='/register'><button>Register</button></Link>
-                </div>
-            }
-            <Comments
-              comments={comments}
-              currentUser={props.currentUser}
-              handleCommentDelete={handleCommentDelete}
-              handleCommentEdit={handleCommentEdit}
-            />
-          </>
-          :
-          <div>
-            <h3>Sorry, no party found!</h3>
-            {/* <PageNotFound /> */}
-          </div>
-          
-      }
-    </div>
+                null
+              }
+              {
+                props.currentUser?.id ?
+                <>
+                  <CommentCreate handleCommentCreate={handleCommentCreate}/>
+                </>
+                  :
+                  <div>
+                    <p>Login to leave a comment!</p>
+                    <Link to='/login'><button>Login</button></Link>
+                    <Link to='/register'><button>Register</button></Link>
+                  </div>
+              }
+              <Comments
+                comments={comments}
+                currentUser={props.currentUser}
+                handleCommentDelete={handleCommentDelete}
+                handleCommentEdit={handleCommentEdit}
+              />
+            </>
+            :
+            <div>
+              <h3>Sorry, no party found!</h3>
+            </div>
+            
+        }
+      </div>
+    </Layout>
   )
 }

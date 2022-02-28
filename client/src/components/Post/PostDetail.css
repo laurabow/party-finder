@@ -1,5 +1,20 @@
+.post-detail {
+  /* display: flex; */
+  /* flex-direction: column; */
+  margin-top: 0px;
+  background-color: #0b0b45;
+}
+
+/* .post-detail-btns {
+  display: flex;
+  flex-direction: row;
+} */
+
 .post-detail-card {
   background-color: rgb(240, 248, 255, 0.8);
   border-radius: 8px;
   box-shadow: 2px 2px 5px;
+  /* max-width: 70%; */
+  margin: 0px 100px 10px 100px;
+  /* padding-top: 20px; */
 }
