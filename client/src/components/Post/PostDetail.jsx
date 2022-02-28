@@ -4,7 +4,7 @@ import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
 import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
-
+import './PostDetail.css';
 
 export default function PostDetail(props) {
 
@@ -47,12 +47,13 @@ export default function PostDetail(props) {
       {
         post?.id ?
           <>
-            <h2>{post.title}</h2>
-            {/* <h3>{post.user.username}</h3> */}
-            <h3>{post.game_system}</h3>
-            <h3>{post.day} at {post.time}</h3>
-            <p>{post.description}</p>
-            
+            <div className='post-detail-card'>
+              <h2>{post.title}</h2>
+              {/* <h3>{post.user.username}</h3> */}
+              <h3>{post.game_system}</h3>
+              <h3>{post.day} at {post.time}</h3>
+              <p>{post.description}</p>
+            </div>
             {
               props.currentUser?.id === post.user_id ?
               <>

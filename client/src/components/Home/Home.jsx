@@ -27,7 +27,6 @@ export default function Home(props) {
           </div>
           }
         </div>
-        <h2 className="homepage-findparty">Find your Party!</h2>
         <PostContainer />
       </div>
     </Layout>
