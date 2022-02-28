@@ -17,7 +17,7 @@ export default function PostEdit(props) {
   const [title, setTitle] = useState('');
   const [game_system, setGameSystem] = useState('');
   const [day, setDay] = useState("Select a Day");
-  // const [time, setTime] = useState() // what state is time?
+  const [time, setTime] = useState('') // what state is time?
   const [description, setDescription] = useState('');
 
   const { id } = useParams();
@@ -76,7 +76,12 @@ export default function PostEdit(props) {
           ))}
         </select>
         <label>Time</label>
-        <p>figure out how to do time!</p>
+        <input
+            required
+            type="time"
+            value={time}
+            onChange={(e) => setTime(e.target.value)}
+          />
         <label>Description</label>
         <textarea
           type="text"
