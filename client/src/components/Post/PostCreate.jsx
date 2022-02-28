@@ -17,7 +17,7 @@ export default function PostCreate(props) {
   const [title, setTitle] = useState('');
   const [game_system, setGameSystem] = useState('')
   const [day, setDay] = useState("Select a Day");
-  // const [time, setTime] = useState() // what state is time?
+  const [time, setTime] = useState('') // what state is time?
   const [description, setDescription] = useState('')
 
   const handleDateChange = e => {
@@ -33,7 +33,7 @@ export default function PostCreate(props) {
             title,
             game_system,
             day,
-            // time,
+            time,
             description
           }
           props.handleCreate(post);
@@ -65,7 +65,13 @@ export default function PostCreate(props) {
             ))}
           </select>
           <label>Time</label>
-          <p>figure out how to do time!</p>
+          <input
+            required
+            type="time"
+            value={time}
+            
+            onChange={(e) => setTime(e.target.value)}
+          />
           <label>Description</label>
           <textarea
             required
@@ -80,5 +86,7 @@ export default function PostCreate(props) {
     </Layout>
   )
 }
+
+
 
 

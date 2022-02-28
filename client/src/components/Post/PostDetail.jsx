@@ -49,7 +49,7 @@ export default function PostDetail(props) {
           <>
             <h2>{post.title}</h2>
             <h3>{post.game_system}</h3>
-            <h3>{post.day} at TIME</h3>
+            <h3>{post.day} at {post.time}</h3>
             <p>{post.description}</p>
             
             {
