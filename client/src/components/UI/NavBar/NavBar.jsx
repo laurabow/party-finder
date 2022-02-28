@@ -10,7 +10,7 @@ export default function NavBar(props) {
         <Link to='/'>
           <div className='logo'>
             <img className='dice' src={D20} alt="red d 20" height='30px'/>
-            <h1>Party Finder</h1>
+            <h1 className='pf-nav-title'>Party Finder</h1>
           </div>
         </Link>
       </div>
