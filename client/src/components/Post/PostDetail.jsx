@@ -2,7 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams, Link, useNavigate } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
-import CommentEdit from '../Comment/CommentEdit';
+// import CommentEdit from '../Comment/CommentEdit';
+// import PageNotFound from '../404/PageNotFound';
 import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
 import './PostDetail.css';
 import moment from 'moment';
@@ -26,7 +27,7 @@ export default function PostDetail(props) {
     }
     fetchComments();
     setPost(foundPost);
-  }, [id, props.post, toggle]);
+  }, [id, props.post, props.posts, toggle]);
 
   console.log(props.post)
   console.log(post);
@@ -61,7 +62,6 @@ export default function PostDetail(props) {
               <h2>{post.title}</h2>
               <h3>user: {post.user_id}</h3>
               <h3>{post.game_system}</h3>
-              {/* <h3>{post.day}'s at {post.time.substring(11, 16)}</h3> */}
               <h3>{getPostMoment(post)}</h3>
               <p>{post.description}</p>
             </div>
@@ -96,7 +96,11 @@ export default function PostDetail(props) {
             />
           </>
           :
-          <h3>Sorry, no party found!</h3>
+          <div>
+            <h3>Sorry, no party found!</h3>
+            {/* <PageNotFound /> */}
+          </div>
+          
       }
     </div>
   )
