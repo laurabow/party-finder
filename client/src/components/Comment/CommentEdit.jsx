@@ -27,7 +27,6 @@ export default function CommentEdit(props) {
 
   const handleCommentEdit = async (post_id, id, formData) => {
     await updateComment(post_id, id, formData)
-    // setToggle(prevToggle => !prevToggle)
     navigate(`/posts/${post_id}`)
   }
 
@@ -48,6 +47,7 @@ export default function CommentEdit(props) {
           value={title}
           onChange={(e) => setTitle(e.target.value)}
         />
+        <label>Content</label>
         <textarea
           type="text"
           value={content}

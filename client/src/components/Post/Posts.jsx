@@ -4,7 +4,6 @@ import './Posts.css';
 import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
 
-// make post card and replace post details with the card component
 
 export default function Posts(props) {
 

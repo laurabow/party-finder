@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link, useNavigate } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import Layout from '../UI/Layout/Layout';
-// import CommentEdit from '../Comment/CommentEdit';
 // import PageNotFound from '../404/PageNotFound';
-import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
+import { createComment, deleteComment, getPostComments } from '../../services/comments';
 import './PostDetail.css';
 import moment from 'moment';
 
@@ -15,8 +14,6 @@ export default function PostDetail(props) {
   const [comments, setComments] = useState([]);
   const [toggle, setToggle] = useState(false);
   const { id } = useParams();
-
-  const navigate = useNavigate();
 
   useEffect(() => {
     const foundPost = props.posts.find(post => {
