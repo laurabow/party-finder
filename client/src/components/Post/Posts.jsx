@@ -20,7 +20,7 @@ export default function Posts(props) {
           props.currentUser &&
           <Link to='/posts/create'><button>Create a Party!</button></Link>
         }
-        <div>
+        <div className='cards'>
           {
             props.posts.map(post => (
               <Link key={post.id} to={`/posts/${post.id}`}>

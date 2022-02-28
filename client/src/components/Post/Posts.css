@@ -8,8 +8,17 @@
   padding: 10px;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 10px;
+  /* max-width: 95vw; */
+}
+
 .post-card {
   background-color: rgb(240, 248, 255, 0.8);
   border-radius: 8px;
   box-shadow: 2px 2px 5px;
+  padding: 2px;
 }
