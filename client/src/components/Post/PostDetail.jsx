@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams, Link, Navigate } from 'react-router-dom';
+import { useParams, Link, useNavigate } from 'react-router-dom';
 import Comments from '../Comment/Comments';
 import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
@@ -13,6 +13,8 @@ export default function PostDetail(props) {
   const [comments, setComments] = useState([]);
   const [toggle, setToggle] = useState(false);
   const { id } = useParams();
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const foundPost = props.posts.find(post => {
@@ -37,7 +39,7 @@ export default function PostDetail(props) {
   const handleCommentEdit = async (id, formData) => {
     await updateComment(id, formData)
     setToggle(prevToggle => !prevToggle)
-    Navigate(`/posts/${id}/comments/${id}`)
+    navigate(`/posts/${id}/comments/${id}`)
   }
 
   const handleCommentDelete = async (comment_id) => {
