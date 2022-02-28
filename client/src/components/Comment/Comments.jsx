@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 // import CommentEdit from './CommentEdit';
+import './Comments.css';
 
 export default function Comments(props) {
   console.log(props.comments)
@@ -10,9 +11,11 @@ export default function Comments(props) {
       <div>
         {props.comments &&
           props.comments.map(comment => (
-            <div key={comment.id}>
-              <h3>{comment.title}</h3>
-              <h4>Author: {comment.user?.username}</h4>
+            <div key={comment.id} className='comment-card'>
+              <div className='comment-card-title'>
+                <h4>{comment.title}</h4>
+                <h5>Player: {comment.user?.username}</h5>
+              </div>
               <p>{comment.content}</p>
               {
                 props.currentUser?.id === comment.user_id ?

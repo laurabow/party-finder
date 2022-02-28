@@ -1,0 +1,12 @@
+.comment-card {
+  background-color: rgb(240, 248, 255, 0.8);
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+  padding: 2px;
+  margin: 20px 400px;
+  display: flex;
+}
+
+.comment-card-title {
+  /* align-items: left; */
+}
