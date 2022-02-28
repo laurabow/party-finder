@@ -1,0 +1,22 @@
+.comment-form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.leave-comment {
+  color: aliceblue;
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  margin: 5px 400px 5px 400px;
+}
+
+.comment-create-title-label {
+  color: aliceblue;
+}
+
+.com-create-content-label {
+  color: aliceblue;
+}

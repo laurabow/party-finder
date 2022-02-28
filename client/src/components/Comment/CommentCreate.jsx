@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import './CommentCreate.css';
 
 export default function CommentCreate(props) {
 
@@ -6,8 +7,9 @@ export default function CommentCreate(props) {
   const [content, setContent] = useState('');
 
   return (
-    <div>
-      <form onSubmit={(e) => {
+    <div className='comment-form-container'>
+      <h3 className='leave-comment'>Leave a Comment</h3>
+      <form className='comment-form' onSubmit={(e) => {
         e.preventDefault();
         const comment = {
           title,
@@ -15,7 +17,7 @@ export default function CommentCreate(props) {
         }
         props.handleCommentCreate(comment)
       }}>
-        <label>Title</label>
+        <label className='comment-create-title-label'>Title</label>
         <input
           required
           autoFocus
@@ -24,6 +26,7 @@ export default function CommentCreate(props) {
           placeholder="Title your comment"
           onChange={(e) => setTitle(e.target.value)}
         />
+        <label className='com-create-content-label'>Content:</label>
         <textarea
           required
           type="text"
