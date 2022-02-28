@@ -5,7 +5,7 @@ import PostDetail from '../components/Post/PostDetail';
 import Posts from '../components/Post/Posts';
 import PostCreate from '../components/Post/PostCreate';
 import PostEdit from '../components/Post/PostEdit';
-import CommentEdit from '../components/Comment/CommentEdit';
+// import CommentEdit from '../components/Comment/CommentEdit';
 
 export default function PostContainer(props) {
 
@@ -40,7 +40,7 @@ export default function PostContainer(props) {
   }
   
   return (
-    <div>
+    <div className='post-container'>
       <Routes>
         <Route path='/' element={
           <Posts posts={posts} currentUser={props.currentUser} />

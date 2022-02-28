@@ -1,7 +1,6 @@
 import React from 'react'
-import { Link } from 'react-router-dom';
-import Layout from '../UI/Layout/Layout';
-import CommentEdit from './CommentEdit';
+// import { Link } from 'react-router-dom';
+// import CommentEdit from './CommentEdit';
 
 export default function Comments(props) {
   console.log(props.comments)
