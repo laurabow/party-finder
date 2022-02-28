@@ -7,13 +7,17 @@
 .party-finder {
   display: flex;
 }
+.pf-nav-title {
+  margin-top: 5px;
+}
 
 .logo {
   display: flex;
 }
 
 .dice {
-  margin-top: 25px;
+  margin-top: 10px;
+  margin-bottom: 12px;
 }
 
 .welcome-buttons {
