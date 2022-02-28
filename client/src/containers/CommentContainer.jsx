@@ -7,7 +7,9 @@ import Comments from '../components/Comment/Comments';
 export default function CommentContainer() {
   return (
     <div>
-      
+      <Routes>
+        {/* <Route path='' element={<PostEdit />} /> */}
+      </Routes>
     </div>
   )
 }

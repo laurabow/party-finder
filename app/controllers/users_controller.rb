@@ -46,6 +46,11 @@ class UsersController < ApplicationController
     } 
   end
 
+  def posts
+    @user = User.find(user_params)
+    @posts = @user.posts
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_user

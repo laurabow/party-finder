@@ -5,6 +5,7 @@ import CommentCreate from '../Comment/CommentCreate';
 import CommentEdit from '../Comment/CommentEdit';
 import { createComment, deleteComment, getPostComments, updateComment } from '../../services/comments';
 import './PostDetail.css';
+import moment from 'moment';
 
 export default function PostDetail(props) {
 
@@ -25,6 +26,9 @@ export default function PostDetail(props) {
     setPost(foundPost);
   }, [id, props.post, toggle]);
 
+  console.log(props.post)
+  console.log(post);
+  
   const handleCommentCreate = async (formData) => {
     await createComment(id, formData)
     setToggle(prevToggle => !prevToggle)
@@ -41,6 +45,10 @@ export default function PostDetail(props) {
     setToggle(prevToggle => !prevToggle)
   }
 
+  const getPostMoment = (post) => {
+    return `${post.day}'s at ${moment(post.time.substring(0, 19)).format('LT')}`
+  }
+
   return (
     
     <div>
@@ -49,9 +57,10 @@ export default function PostDetail(props) {
           <>
             <div className='post-detail-card'>
               <h2>{post.title}</h2>
-              {/* <h3>{post.user.username}</h3> */}
+              <h3>user: {post.user_id}</h3>
               <h3>{post.game_system}</h3>
-              <h3>{post.day} at {post.time}</h3>
+              {/* <h3>{post.day}'s at {post.time.substring(11, 16)}</h3> */}
+              <h3>{getPostMoment(post)}</h3>
               <p>{post.description}</p>
             </div>
             {
