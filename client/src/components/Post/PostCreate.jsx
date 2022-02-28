@@ -69,7 +69,6 @@ export default function PostCreate(props) {
             required
             type="time"
             value={time}
-            
             onChange={(e) => setTime(e.target.value)}
           />
           <label>Description</label>
