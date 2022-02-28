@@ -17,9 +17,9 @@ export default function Comments(props) {
               {
                 props.currentUser?.id === comment.user_id ?
                   <div>
-                    <Link to={`/comments/${comment.id}/edit`}>
-                      <button>Edit</button>
-                    </Link>
+                    {/* <Link to={`/comments/${comment.id}/edit`}> */}
+                      {/* <button>Edit</button> */}
+                    {/* </Link> */}
                     <button
                       onClick={() => props.handleCommentDelete(comment.id)}>
                       Delete
