@@ -5,7 +5,7 @@ import PostDetail from '../components/Post/PostDetail';
 import Posts from '../components/Post/Posts';
 import PostCreate from '../components/Post/PostCreate';
 import PostEdit from '../components/Post/PostEdit';
-// import CommentEdit from '../components/Comment/CommentEdit';
+import CommentEdit from '../components/Comment/CommentEdit';
 
 export default function PostContainer(props) {
 
@@ -54,7 +54,7 @@ export default function PostContainer(props) {
         <Route path='/:id/edit' element={
           <PostEdit posts={posts} handleEdit={handleEdit} />
         } />
-        {/* <Route path='/:id/comments/:id/edit' element={<CommentEdit />} /> */}
+        <Route path='/:post_id/comments/:id/edit' element={<CommentEdit />} />
       </Routes>
     </div>
   )

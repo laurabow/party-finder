@@ -1,21 +1,35 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
+import { getOnePostComment, updateComment } from '../../services/comments';
 
 export default function CommentEdit(props) {
 
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
-  const { id } = useParams();
+  const { id, post_id } = useParams();
+  const navigate = useNavigate();
 
   useEffect(() => {
-    const foundComment = props.comments.find(comment => {
-      return comment.id === parseInt(id);
-    })
-    if (foundComment) {
-      setTitle(foundComment?.title)
-      setContent(foundComment?.content)
+    // const foundComment = props.comments.find(comment => {
+    //   return comment.id === parseInt(id);
+    // })
+    const foundComment = async () => {
+      const comment = await getOnePostComment(post_id, id)
+      setTitle(comment?.title)
+      setContent(comment?.content)
     }
-  }, [id, props.comments]);
+    foundComment();
+    // if (foundComment) {
+    //   setTitle(foundComment?.title)
+    //   setContent(foundComment?.content)
+    // }
+  }, [id, post_id]);
+
+  const handleCommentEdit = async (post_id, id, formData) => {
+    await updateComment(post_id, id, formData)
+    // setToggle(prevToggle => !prevToggle)
+    navigate(`/posts/${post_id}`)
+  }
 
   return (
     <div>
@@ -25,7 +39,7 @@ export default function CommentEdit(props) {
           title,
           content
         }
-        props.handleCommentEdit(id, comment)
+        handleCommentEdit(post_id, id, comment)
       }}>
         <label>Title</label>
         <input

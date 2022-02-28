@@ -38,11 +38,7 @@ export default function PostDetail(props) {
     setToggle(prevToggle => !prevToggle)
   }
 
-  const handleCommentEdit = async (id, formData) => {
-    await updateComment(id, formData)
-    setToggle(prevToggle => !prevToggle)
-    navigate(`/posts/${id}/comments/${id}`)
-  }
+  
 
   const handleCommentDelete = async (comment_id) => {
     await deleteComment(id, comment_id)
@@ -60,7 +56,7 @@ export default function PostDetail(props) {
           post?.id ?
             <>
               <div className='post-detail-card'>
-                <h2>{post.title}</h2>
+                <h2 className='card-h2'>{post.title}</h2>
                 <h3>user: {post.user_id}</h3>
                 <h3>{post.game_system}</h3>
                 <h3>{getPostMoment(post)}</h3>
@@ -91,9 +87,10 @@ export default function PostDetail(props) {
               }
               <Comments
                 comments={comments}
+                post={post}
                 currentUser={props.currentUser}
                 handleCommentDelete={handleCommentDelete}
-                handleCommentEdit={handleCommentEdit}
+                // handleCommentEdit={handleCommentEdit}
               />
             </>
             :

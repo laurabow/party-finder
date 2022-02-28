@@ -26,7 +26,7 @@ export default function Posts(props) {
               <Link key={post.id} to={`/posts/${post.id}`}>
                 <div className='post-card'>
                   <h2>{post.title}</h2>
-                  {/* <h3>{post.user.username}</h3> */}
+                  <h3>Author: {post.user?.username}</h3>
                   <h3>{post.game_system}</h3>
                   <h3>{getPostMoment(post)}</h3>
                   <p>{post.description}</p>
