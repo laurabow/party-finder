@@ -4,8 +4,17 @@ import './Posts.css';
 import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
 import Card from '@mui/material/Card';
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
 
-
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))`
+  & .MuiTooltip-tooltip {
+    background: navy;
+  }
+`;
 
 export default function Posts(props) {
 
@@ -19,7 +28,16 @@ export default function Posts(props) {
         <h1 className='find-party-title'>Find a Party!</h1>
         {
           props.currentUser &&
-          <Link to='/posts/create'><button>Create a Party!</button></Link>
+          // <Link to='/posts/create'><button>Create a Party!</button></Link>
+          <div>
+              <Link to='/posts/create'>
+                <StyledTooltip title="Create">
+                  <Button variant="contained" color="primary">
+                    Create a Party!
+                  </Button>
+                </StyledTooltip>
+              </Link>
+          </div>
         }
         <div className='cards'>
           {

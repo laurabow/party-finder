@@ -3,6 +3,17 @@ import './Home.css'
 import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
 import PostContainer from '../../containers/PostContainer';
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))`
+  & .MuiTooltip-tooltip {
+    background: navy;
+  }
+`;
 
 
 
@@ -20,13 +31,37 @@ export default function Home(props) {
         <div className='homepage-btns'>
         {props.currentUser ?
         <div className='loggedin-btns'>
-            <Link to='/posts'><button>Find a Party!</button></Link>
-            <Link to='/posts/create'><button>Create a Party!</button></Link>
+              <Link to='/posts'>
+                <StyledTooltip title="Find a Party">
+                  <Button variant="contained" color="primary">
+                    Find a Party!
+                  </Button>
+                </StyledTooltip>
+              </Link>
+              <Link to='/posts/create'>
+                <StyledTooltip title="Create a Party">
+                  <Button variant="contained" color="primary">
+                    Create a Party!
+                  </Button>
+                </StyledTooltip>
+              </Link>
           </div>
           :
           <div className='loggedout-btns'>
-            <Link to='/login'><button>Login</button></Link>
-            <Link to='/register'><button>Register</button></Link>
+              <Link to='/login'>
+                <StyledTooltip title="Login">
+                  <Button variant="contained" color="primary">
+                    Login
+                  </Button>
+                </StyledTooltip>
+              </Link>
+              <Link to='/register'>
+                <StyledTooltip title="Register">
+                  <Button variant="contained" color="primary">
+                    Register
+                  </Button>
+                </StyledTooltip>
+              </Link>
           </div>
           }
         </div>
