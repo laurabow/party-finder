@@ -29,10 +29,11 @@ export default function Posts(props) {
         {
           props.currentUser &&
           // <Link to='/posts/create'><button>Create a Party!</button></Link>
-          <div>
+          <div className='posts-create-btn'>
               <Link to='/posts/create'>
                 <StyledTooltip title="Create">
-                  <Button variant="contained" color="primary">
+                  <Button 
+                    variant="contained" color="primary">
                     Create a Party!
                   </Button>
                 </StyledTooltip>

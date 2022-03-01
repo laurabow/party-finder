@@ -1,11 +1,17 @@
 .find-party {
   background-color: #0b0b45;
   margin-top: 0px;
+  padding-top: 20px;
 }
 
 .find-party-title {
   color: aliceblue;
   padding: 10px;
+  margin-bottom: 20px;
+}
+
+.posts-create-btn {
+  margin-bottom: 30px;
 }
 
 .cards {
@@ -13,6 +19,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   column-gap: 10px;
   row-gap: 10px;
+  padding-bottom: 50px;
   /* max-width: 95vw; */
 }
 
