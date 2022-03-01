@@ -1,0 +1,22 @@
+.create-page {
+  background-color: #0b0b45;
+}
+
+.create-title {
+  color: aliceblue;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b45;
+}
+
+.create-form {
+  display: flex;
+  flex-direction: column;
+  color: aliceblue;
+  margin-bottom: 100px;
+}
