@@ -67,7 +67,7 @@ export default function PostDetail(props) {
             <>
               <div className='post-detail-card'>
                 <h2 className='card-h2'>{post.title}</h2>
-                <h3>user: {post.user_id}</h3>
+                <h3>Game Master: {post.user?.username}</h3>
                 <h3>{post.game_system}</h3>
                 <h3>{getPostMoment(post)}</h3>
                 <p>{post.description}</p>
@@ -82,7 +82,7 @@ export default function PostDetail(props) {
                         </Button>
                       </StyledTooltip>
                     </Link>
-                    
+
                       <StyledTooltip title="Delete">
                         <Button
                           onClick={() => props.handleDelete(post.id)}
