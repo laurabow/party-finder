@@ -102,10 +102,12 @@ export default function PostDetail(props) {
                 </>
                   :
                   <div>
-                    <p>Login to leave a comment!</p>
+                    <p className='login-suggestion'>Login to leave a comment!</p>
                     <Link to='/login'>
                     <StyledTooltip title="Login">
-                        <Button variant="contained" color="primary">
+                        <Button id='detail-login-btn'
+                          variant="contained"
+                          color="primary">
                           Login
                         </Button>
                       </StyledTooltip>
@@ -113,7 +115,9 @@ export default function PostDetail(props) {
 
                     <Link to='/register'>
                       <StyledTooltip title="Register">
-                        <Button variant="contained" color="primary">
+                        <Button id='detail-register-btn'
+                          variant="contained"
+                          color="primary">
                           Register
                         </Button>
                       </StyledTooltip>

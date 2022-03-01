@@ -11,6 +11,12 @@
   padding-top: 40px;
 }
 
+.login-suggestion {
+  color: aliceblue;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 .post-detail {
   margin-top: 30px;
   background-color: #0b0b45;
@@ -37,4 +43,12 @@
 
 .comments {
   padding-bottom: 30px;
+}
+
+#detail-login-btn {
+  margin-right: 5px;
+}
+
+#detail-register-btn {
+  margin-left: 5px;
 }
