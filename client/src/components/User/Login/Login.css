@@ -34,7 +34,11 @@
   padding: 10px;
 }
 
-/* Styled button doesn't work on login form */
-/* .login-form-btn {
-  margin-top: 30px;
-} */
+.login-form-btn {
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 10px;
+}

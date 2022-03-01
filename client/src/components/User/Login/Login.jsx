@@ -57,7 +57,7 @@ export default function Login(props) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <button>Login</button>
+            <button className='login-form-btn'>Login</button>
           </form>
         </div>
       </div>

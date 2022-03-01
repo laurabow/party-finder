@@ -9,3 +9,20 @@
 
 .comment-card-title {
 }
+
+#edit-comment-btn {
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 3px;
+  margin: 3px;
+}
+
+#delete-comment-btn {
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 3px;
+}
