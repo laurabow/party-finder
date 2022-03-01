@@ -103,7 +103,6 @@ export default function PostCreate(props) {
                 Create Party Post
               </Button>
             </StyledTooltip>
-            {/* <button>Create Party Post</button> */}
           </form>
         </div>
       </div>

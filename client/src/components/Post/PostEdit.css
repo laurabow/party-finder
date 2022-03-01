@@ -1,0 +1,49 @@
+.edit-post-page {
+  background-color: #0b0b45;
+}
+
+.edit-post-title {
+  color: aliceblue;
+  padding-top: 20px;
+  margin-bottom: 30px;
+}
+
+.edit-post-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b45;
+}
+
+.edit-post-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px 40px 80px;
+  background-color: rgb(240, 248, 255, 0.8);
+  margin-bottom: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+}
+
+.edit-party-name {
+  padding: 10px;
+}
+
+.edit-game-sys {
+  padding: 10px;
+}
+
+.edit-time {
+  padding: 10px;
+}
+
+.edit-day {
+  padding: 10px;
+}
+
+.edit-description {
+  padding: 10px;
+}
+
+.edit-form-btn {
+  margin-top: 30px;
+}
