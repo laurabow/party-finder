@@ -19,7 +19,6 @@ export default function Comments(props) {
   console.log(props.comments)
   
   return (
-
       <div>
         {props.comments &&
           props.comments.map(comment => (

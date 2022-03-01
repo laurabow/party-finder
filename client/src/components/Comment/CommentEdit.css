@@ -1,0 +1,45 @@
+.edit-comment-page {
+  background-color: #0b0b45;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.edit-comment-title {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
+.edit-com-form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b45;
+}
+
+.edit-comment-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px 40px 80px;
+  background-color: rgb(240, 248, 255, 0.8);
+  margin-bottom: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+}
+
+.edit-com-title {
+  padding: 10px;
+}
+
+.edit-com-content {
+  padding: 10px;
+}
+
+.edit-com-form-btn {
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px;
+}
