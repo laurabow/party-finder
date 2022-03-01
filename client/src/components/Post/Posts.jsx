@@ -3,6 +3,8 @@ import moment from 'moment';
 import './Posts.css';
 import { Link } from 'react-router-dom';
 import Layout from '../UI/Layout/Layout';
+import Card from '@mui/material/Card';
+
 
 
 export default function Posts(props) {
@@ -23,13 +25,13 @@ export default function Posts(props) {
           {
             props.posts.map(post => (
               <Link key={post.id} to={`/posts/${post.id}`}>
-                <div className='post-card'>
+                <Card variant='outlined' className='post-card'>
                   <h2>{post.title}</h2>
                   <h3>Author: {post.user?.username}</h3>
                   <h3>{post.game_system}</h3>
                   <h3>{getPostMoment(post)}</h3>
                   <p>{post.description}</p>
-                </div>
+                </Card>
               </Link>
             ))
           }
