@@ -38,6 +38,12 @@
   padding: 10px;
 }
 
-#reg-form-btn {
-  margin-top: 30px;
+.reg-form-btn {
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 3px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px;
 }
