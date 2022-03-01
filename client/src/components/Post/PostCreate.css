@@ -17,6 +17,33 @@
 .create-form {
   display: flex;
   flex-direction: column;
-  color: aliceblue;
+  padding: 20px 80px 40px 80px;
+  background-color: rgb(240, 248, 255, 0.8);
   margin-bottom: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+}
+
+.party-name {
+  padding: 10px;
+}
+
+.game-system {
+  padding: 10px;
+}
+
+.time {
+  padding: 10px;
+}
+
+.day {
+  padding: 10px;
+}
+
+.description {
+  padding: 10px;
+}
+
+.create-form-btn {
+  margin-top: 30px;
 }

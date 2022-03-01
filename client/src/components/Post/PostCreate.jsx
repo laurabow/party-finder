@@ -96,7 +96,10 @@ export default function PostCreate(props) {
               onChange={(e) => setDescription(e.target.value)}
             />
             <StyledTooltip title="Create Party">
-              <Button variant="contained" color="primary">
+              <Button
+                className='create-form-btn'
+                variant="contained"
+                color="primary">
                 Create Party Post
               </Button>
             </StyledTooltip>
