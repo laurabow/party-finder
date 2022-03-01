@@ -33,14 +33,18 @@ export default function Home(props) {
         <div className='loggedin-btns'>
               <Link to='/posts'>
                 <StyledTooltip title="Find a Party">
-                  <Button variant="contained" color="primary">
+                  <Button id='find-party-home-btn'
+                    variant="contained"
+                    color="primary">
                     Find a Party!
                   </Button>
                 </StyledTooltip>
               </Link>
               <Link to='/posts/create'>
                 <StyledTooltip title="Create a Party">
-                  <Button variant="contained" color="primary">
+                  <Button id='create-homepage-btn'
+                    variant="contained"
+                    color="primary">
                     Create a Party!
                   </Button>
                 </StyledTooltip>
@@ -50,14 +54,18 @@ export default function Home(props) {
           <div className='loggedout-btns'>
               <Link to='/login'>
                 <StyledTooltip title="Login">
-                  <Button variant="contained" color="primary">
+                  <Button id='homepage-login-btn'
+                    variant="contained"
+                    color="primary">
                     Login
                   </Button>
                 </StyledTooltip>
               </Link>
               <Link to='/register'>
                 <StyledTooltip title="Register">
-                  <Button variant="contained" color="primary">
+                  <Button id='homepage-reg-btn'
+                    variant="contained"
+                    color="primary">
                     Register
                   </Button>
                 </StyledTooltip>

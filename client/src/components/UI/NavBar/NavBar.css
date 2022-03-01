@@ -2,6 +2,9 @@
   display: flex;
   justify-content: space-between;
   background-color: rgb(104, 103, 103);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 .party-finder {
@@ -20,9 +23,30 @@
   margin-bottom: 12px;
 }
 
+.welcome {
+  padding-right: 10px;
+}
+
 .welcome-buttons {
   display: flex;
   align-items: center;
+  padding-right: 4px;
+}
+
+#find-party-home-btn {
+  margin-right: 5px;
+}
+
+#create-homepage-btn {
+  margin-left: 5px;
+}
+
+#homepage-login-btn {
+  margin-right: 5px;
+}
+
+#homepage-reg-btn {
+  margin-left: 5px;
 }
 
 #basic-button {
