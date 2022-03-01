@@ -7,6 +7,18 @@ import Layout from '../UI/Layout/Layout';
 import { createComment, deleteComment, getPostComments } from '../../services/comments';
 import './PostDetail.css';
 import moment from 'moment';
+import { styled } from '@mui/material/styles';
+import Button from '@mui/material/Button';
+import Tooltip from '@mui/material/Tooltip';
+// import DeleteIcon from '@mui/icons-material/Delete';
+
+const StyledTooltip = styled(({ className, ...props }) => (
+  <Tooltip {...props} classes={{ popper: className }} />
+))`
+  & .MuiTooltip-tooltip {
+    background: navy;
+  }
+`;
 
 export default function PostDetail(props) {
 
@@ -64,9 +76,21 @@ export default function PostDetail(props) {
                 props.currentUser?.id === post.user_id ?
                 <>
                     <Link to={`/posts/${post.id}/edit`}>
-                      <button>Edit</button>
+                      <StyledTooltip title="Edit">
+                        <Button variant="contained" color="primary">
+                          Edit
+                        </Button>
+                      </StyledTooltip>
                     </Link>
-                  <button onClick={() => props.handleDelete(post.id)}>Delete</button>
+                    
+                      <StyledTooltip title="Delete">
+                        <Button
+                          onClick={() => props.handleDelete(post.id)}
+                          variant="contained"
+                          color="primary">
+                            Delete
+                        </Button>
+                      </StyledTooltip>
                 </>
                 :
                 null
@@ -79,8 +103,21 @@ export default function PostDetail(props) {
                   :
                   <div>
                     <p>Login to leave a comment!</p>
-                    <Link to='/login'><button>Login</button></Link>
-                    <Link to='/register'><button>Register</button></Link>
+                    <Link to='/login'>
+                    <StyledTooltip title="Login">
+                        <Button variant="contained" color="primary">
+                          Login
+                        </Button>
+                      </StyledTooltip>
+                    </Link>
+
+                    <Link to='/register'>
+                      <StyledTooltip title="Register">
+                        <Button variant="contained" color="primary">
+                          Register
+                        </Button>
+                      </StyledTooltip>
+                    </Link>
                   </div>
               }
               <Comments
