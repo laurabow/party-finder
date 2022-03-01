@@ -57,14 +57,7 @@ export default function Login(props) {
               value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
-            <StyledTooltip title="Create Party">
-              <Button
-                id='login-form-btn'
-                variant="contained"
-                color="primary">
-                Login
-              </Button>
-            </StyledTooltip>
+            <button>Login</button>
           </form>
         </div>
       </div>

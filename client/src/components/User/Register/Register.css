@@ -1,0 +1,43 @@
+.register-page {
+  background-color: #0b0b45;
+  margin-top: 50px;
+  padding-bottom: 50px;
+}
+
+.register-title {
+  padding-top: 30px;
+  margin-bottom: 20px;
+  color: aliceblue;
+}
+
+.register-form-container {
+  display: flex;
+  justify-content: center;
+  background-color: #0b0b45;
+}
+
+.register-form {
+  display: flex;
+  flex-direction: column;
+  padding: 20px 80px 40px 80px;
+  background-color: rgb(240, 248, 255, 0.8);
+  margin-bottom: 100px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 5px;
+}
+
+.reg-username {
+  padding: 10px;
+}
+
+.reg-email {
+  padding: 10px;
+}
+
+.reg-password {
+  padding: 10px;
+}
+
+#reg-form-btn {
+  margin-top: 30px;
+}
