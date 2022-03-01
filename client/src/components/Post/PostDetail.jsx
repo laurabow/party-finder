@@ -49,6 +49,7 @@ export default function PostDetail(props) {
   return (
     <Layout>
       <div className='post-detail'>
+        <h1 className='detail-title'>Party Details</h1>
         {
           post?.id ?
             <>

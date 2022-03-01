@@ -4,6 +4,12 @@
   /* border: 1px solid red; */
 }
 
+.detail-title {
+  color: aliceblue;
+  margin-bottom: 20px;
+  padding-top: 10px;
+}
+
 .post-detail {
   /* display: flex; */
   /* flex-direction: column; */
