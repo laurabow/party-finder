@@ -31,23 +31,30 @@ export default function NavBar(props) {
             <h4>Welcome, {props.currentUser.username}!</h4>
             <Link to='/posts'>
               <StyledTooltip title="Find a Party">
-                  <Button variant="contained" color="primary">
+                  <Button
+                    variant="contained"
+                    color="primary"
+                    size="small">
                     Find a Party!
                   </Button>
                 </StyledTooltip>
             </Link>
             <Link to='/posts/create'>
               <StyledTooltip title="Create a Party">
-                  <Button variant="contained" color="primary">
-                    Create a Party!
-                  </Button>
-                </StyledTooltip>
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small">
+                  Create a Party!
+                </Button>
+              </StyledTooltip>
             </Link>
               <StyledTooltip title="Logout">
                 <Button
                   onClick={props.logout}
                   variant="contained"
-                  color="primary">
+                  color="primary"
+                  size="small">
                     Logout
                   </Button>
                 </StyledTooltip>
@@ -56,24 +63,33 @@ export default function NavBar(props) {
           <>
             <Link to='/posts'>
               <StyledTooltip title="Find a Party">
-                  <Button variant="contained" color="primary">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small">
                     Find a Party!
-                  </Button>
-                </StyledTooltip>
+                </Button>
+              </StyledTooltip>
             </Link>
             <Link to='/login'>
               <StyledTooltip title="Login">
-                  <Button variant="contained" color="primary">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small">
                     Login
-                  </Button>
-                </StyledTooltip>
+                </Button>
+              </StyledTooltip>
             </Link>
             <Link to='/register'>
               <StyledTooltip title="Register">
-                  <Button variant="contained" color="primary">
+                <Button
+                  variant="contained"
+                  color="primary"
+                  size="small">
                     Register
-                  </Button>
-                </StyledTooltip>
+                </Button>
+              </StyledTooltip>
             </Link>
           </>
           }
