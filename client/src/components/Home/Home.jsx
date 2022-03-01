@@ -15,10 +15,7 @@ const StyledTooltip = styled(({ className, ...props }) => (
   }
 `;
 
-
-
 export default function Home(props) {
-
 
   return (
     <Layout>

@@ -2,9 +2,10 @@ import React from 'react'
 import { Github, linkedin } from '../../../assets/index';
 import './Footer.css';
 
+
 export default function Footer() {
   return (
-    <div>
+    <div className='footer-container'>
       <div className='footer'>
         <a
           href='https://github.com/laurabow'
