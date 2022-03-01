@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { loginUser } from '../../../services/user';
 import Layout from '../../UI/Layout/Layout';
+import './Login.css';
 
 
 export default function Login(props) {
@@ -13,7 +14,7 @@ export default function Login(props) {
 
   return (
     <Layout>
-      <div>
+      <div className='login'>
         <form onSubmit={async (e) => {
             e.preventDefault()
             const user = {

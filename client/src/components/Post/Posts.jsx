@@ -28,7 +28,6 @@ export default function Posts(props) {
         <h1 className='find-party-title'>Find a Party!</h1>
         {
           props.currentUser &&
-          // <Link to='/posts/create'><button>Create a Party!</button></Link>
           <div className='posts-create-btn'>
               <Link to='/posts/create'>
                 <StyledTooltip title="Create">
