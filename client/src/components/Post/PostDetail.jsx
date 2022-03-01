@@ -120,13 +120,15 @@ export default function PostDetail(props) {
                     </Link>
                   </div>
               }
-              <Comments
-                comments={comments}
-                post={post}
-                currentUser={props.currentUser}
-                handleCommentDelete={handleCommentDelete}
-                // handleCommentEdit={handleCommentEdit}
-              />
+              <div className='comments'>
+                <Comments
+                  comments={comments}
+                  post={post}
+                  currentUser={props.currentUser}
+                  handleCommentDelete={handleCommentDelete}
+                  // handleCommentEdit={handleCommentEdit}
+                />
+              </div>
             </>
             :
             <div>
