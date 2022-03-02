@@ -1,10 +1,11 @@
 .edit-post-page {
   background-color: #0b0b45;
+  margin-top: 30px;
 }
 
 .edit-post-title {
   color: aliceblue;
-  padding-top: 20px;
+  padding-top: 40px;
   margin-bottom: 30px;
 }
 
@@ -45,5 +46,11 @@
 }
 
 .edit-form-btn {
-  margin-top: 30px;
+  background-color: #2196f3;
+  color: white;
+  border: gray;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 20px;
+  box-shadow: 2px 2px 5px;
 }

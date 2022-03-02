@@ -1,19 +1,8 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import './PostEdit.css';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 import Layout from '../UI/Layout/Layout';
 
-
-const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))`
-  & .MuiTooltip-tooltip {
-    background: navy;
-  }
-`;
 
 
 let days = [
@@ -96,7 +85,6 @@ export default function PostEdit(props) {
             </select>
             <label className='edit-time'>Time</label>
             <input
-                required
                 type="time"
                 value={time}
                 onChange={(e) => setTime(e.target.value)}
@@ -107,14 +95,7 @@ export default function PostEdit(props) {
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
-            <StyledTooltip title="Edit Party">
-                <Button
-                  className='edit-form-btn'
-                  variant="contained"
-                  color="primary">
-                  Edit Party Post
-                </Button>
-              </StyledTooltip>
+            <button className='edit-form-btn'>Edit Party Post</button>
           </form>
         </div>
       </div>

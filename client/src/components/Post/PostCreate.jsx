@@ -1,18 +1,7 @@
 import { useState } from 'react';
 import Layout from '../UI/Layout/Layout';
 import './PostCreate.css';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 
-
-const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))`
-  & .MuiTooltip-tooltip {
-    background: navy;
-  }
-`;
 
 
 let days = [
@@ -95,14 +84,7 @@ export default function PostCreate(props) {
               placeholder="Describe your game and party"
               onChange={(e) => setDescription(e.target.value)}
             />
-            <StyledTooltip title="Create Party">
-              <Button
-                className='create-form-btn'
-                variant="contained"
-                color="primary">
-                Create Party Post
-              </Button>
-            </StyledTooltip>
+            <button className='create-form-btn'>Create Party Post</button>
           </form>
         </div>
       </div>

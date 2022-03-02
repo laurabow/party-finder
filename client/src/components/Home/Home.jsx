@@ -1,7 +1,6 @@
 import React from 'react'
 import './Home.css'
 import { Link } from 'react-router-dom';
-import Layout from '../UI/Layout/Layout';
 import PostContainer from '../../containers/PostContainer';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
@@ -18,7 +17,6 @@ const StyledTooltip = styled(({ className, ...props }) => (
 export default function Home(props) {
 
   return (
-    <Layout>
       <div className='homepage'>
         
         <h1 className="homepage-title">Welcome to party finder!</h1>
@@ -72,6 +70,5 @@ export default function Home(props) {
         </div>
         <PostContainer />
       </div>
-    </Layout>
   )
 }
