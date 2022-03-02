@@ -1,18 +1,8 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import './Comments.css';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 
 
-const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))`
-  & .MuiTooltip-tooltip {
-    background: navy;
-  }
-`;
 
 export default function Comments(props) {
   console.log(props.comments)
