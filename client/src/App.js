@@ -30,7 +30,6 @@ function App() {
     <div className="App">
       <NavBar currentUser={currentUser} logout={logout}/>
       <Routes>
-        
         <Route path='/register' element={<Register setCurrentUser={setCurrentUser}/>} />
         <Route path='/login' element={<Login setCurrentUser={setCurrentUser}/>} />
         <Route path='posts/*' element={<PostContainer currentUser={currentUser} />} />
