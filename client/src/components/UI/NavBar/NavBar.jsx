@@ -12,7 +12,7 @@ export default function NavBar(props) {
 
   const [username, setUsername] = useState("")
   useEffect(() => {
-  setUsername(props.currentUser.username)
+  setUsername(props.currentUser?.username)
 }, [])
 
   const [anchorEl, setAnchorEl] = React.useState(null);
