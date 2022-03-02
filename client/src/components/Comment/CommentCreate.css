@@ -28,3 +28,41 @@
   background-color: rgb(3, 129, 240);
   color: aliceblue;
 }
+
+@media only screen and (max-width: 1095px) {
+  /*Tablets [601px -> 1200px]*/
+  .comment-form {
+    margin: 5px 300px 5px 300px;
+  }
+  .leave-comment-btn {
+    margin: 10px 150px 10px 150px;
+  }
+}
+
+@media only screen and (max-width: 975px) {
+  /*Big smartphones [426px -> 600px]*/
+  .comment-form {
+    margin: 5px 300px 5px 300px;
+  }
+  .leave-comment-btn {
+    margin: 10px 100px 10px 100px;
+  }
+}
+
+@media only screen and (max-width: 880px) {
+  .leave-comment-btn {
+    margin: 10px 80px 10px 80px;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .leave-comment-btn {
+    margin: 10px 50px 10px 50px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  .leave-comment-btn {
+    margin: 10px 20px 10px 20px;
+  }
+}

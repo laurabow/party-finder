@@ -26,3 +26,24 @@
   border-radius: 5px;
   padding: 3px;
 }
+
+@media only screen and (max-width: 1090px) {
+  /*Tablets [601px -> 1200px]*/
+  .comment-card {
+    margin: 20px 300px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  /*Big smartphones [426px -> 600px]*/
+  .comment-card {
+    margin: 20px 250px;
+  }
+}
+
+@media only screen and (max-width: 775px) {
+  /*Small smartphones*/
+  .comment-card {
+    margin: 20px 100px;
+  }
+}

@@ -27,18 +27,18 @@
   flex-direction: row;
 } */
 
-.card-h2 {
-  margin-top: 0px;
-}
-
 .post-detail-card {
   background-color: rgb(240, 248, 255, 0.8);
   border-radius: 8px;
   box-shadow: 2px 2px 5px;
   /* max-width: 70%; */
-  margin: 0px 200px 10px 200px;
+  margin: 0px 300px 10px 300px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.card-h2 {
+  margin-top: 0px;
 }
 
 .comments {
@@ -51,4 +51,23 @@
 
 #detail-register-btn {
   margin-left: 5px;
+}
+
+@media only screen and (max-width: 1000px) {
+  /*Tablets [601px -> 1200px]*/
+  .post-detail-card {
+    margin: 0px 150px 10px 150px;
+  }
+}
+
+@media only screen and (max-width: 750px) {
+  .post-detail-card {
+    margin: 0px 80px 10px 80px;
+  }
+}
+
+@media only screen and (max-width: 6000px) {
+  .post-detail-card {
+    margin: 0px 20px 10px 20px;
+  }
 }
