@@ -13,7 +13,28 @@
 .homepage-intro {
   background-color: rgb(240, 248, 255, 0.8);
   border-radius: 8px;
-  margin: 20px 100px 50px 100px;
+  margin: 20px 300px 50px 300px;
   padding: 5px 10px 5px 10px;
   box-shadow: 2px 2px 5px;
+}
+
+@media only screen and (max-width: 1200px) {
+  /*Tablets [601px -> 1200px]*/
+  .homepage-intro {
+    margin: 20px 100px 50px 100px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*Big smartphones [426px -> 600px]*/
+  .homepage-intro {
+    margin: 20px 70px 50px 70px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  /*Small smartphones*/
+  .homepage-intro {
+    margin: 20px 50px 50px 50px;
+  }
 }
