@@ -2,19 +2,11 @@ import React from 'react'
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import { D20 } from '../../../assets/index.js';
-// import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
-// import Tooltip from '@mui/material/Tooltip';
 import Menu from '@mui/material/Menu';
 import MenuItem from '@mui/material/MenuItem';
 
-// const StyledTooltip = styled(({ className, ...props }) => (
-//   <Tooltip {...props} classes={{ popper: className }} />
-// ))`
-//   & .MuiTooltip-tooltip {
-//     background: navy;
-//   }
-// `;
+
 
 export default function NavBar(props) {
 

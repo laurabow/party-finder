@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
-// import CommentEdit from './CommentEdit';
 import './Comments.css';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';

@@ -10,7 +10,6 @@ import moment from 'moment';
 import { styled } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
-// import DeleteIcon from '@mui/icons-material/Delete';
 
 const StyledTooltip = styled(({ className, ...props }) => (
   <Tooltip {...props} classes={{ popper: className }} />
@@ -130,7 +129,6 @@ export default function PostDetail(props) {
                   post={post}
                   currentUser={props.currentUser}
                   handleCommentDelete={handleCommentDelete}
-                  // handleCommentEdit={handleCommentEdit}
                 />
               </div>
             </>

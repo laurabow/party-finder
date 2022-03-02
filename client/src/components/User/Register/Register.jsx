@@ -3,18 +3,8 @@ import { registerUser } from '../../../services/user';
 import { useNavigate } from 'react-router-dom';
 import Layout from '../../UI/Layout/Layout';
 import './Register.css';
-import { styled } from '@mui/material/styles';
-import Button from '@mui/material/Button';
-import Tooltip from '@mui/material/Tooltip';
 
 
-const StyledTooltip = styled(({ className, ...props }) => (
-  <Tooltip {...props} classes={{ popper: className }} />
-))`
-  & .MuiTooltip-tooltip {
-    background: navy;
-  }
-`;
 
 export default function Register(props) {
 
