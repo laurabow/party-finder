@@ -25,7 +25,7 @@ export default function Register(props) {
               const user = {
                 username,
                 email,
-                password
+                password_digest: password
               }
             const resp = await registerUser(user)
             props.setCurrentUser(resp)
