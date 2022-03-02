@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import { D20 } from '../../../assets/index.js';
