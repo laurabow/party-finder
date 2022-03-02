@@ -28,7 +28,7 @@ function App() {
 
   return (
     <div className="App">
-      <NavBar currentUser={currentUser} logout={logout}/>
+      {currentUser && <NavBar currentUser={currentUser} logout={logout}/>}
       <Routes>
         
         <Route path='/register' element={<Register setCurrentUser={setCurrentUser}/>} />
