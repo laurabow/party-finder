@@ -22,10 +22,10 @@ export const verifyUser = async () => {
 
 // register user: (create)
 export const registerUser = async(registerData) => {
-  const req = await api.post('https://ttrpg-party-finder.herokuapp.com/users', {user: registerData})
-  localStorage.setItem('authToken', req.data.token)
-  api.defaults.headers.common.authorization = `Bearer ${req.data.token}`
-  const resp = req.data.user
+  const resp = await api.post('https://ttrpg-party-finder.herokuapp.com/users', {user: registerData})
+  localStorage.setItem('authToken', resp.data.token)
+  api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
+  // const resp = req.data.user
   return resp
 }
 
