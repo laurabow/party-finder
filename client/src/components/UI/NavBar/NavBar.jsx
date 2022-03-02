@@ -37,7 +37,7 @@ export default function NavBar(props) {
       <div className='welcome-buttons'>
         {props.currentUser ?
         <div className='welcome-buttons'>
-            <h4 className='welcome'>Welcome, {username}!</h4>
+            <h4 className='welcome'>Welcome, {props.currentUser.username}!</h4>
             <Button
               id="basic-button"
               variant="contained"
