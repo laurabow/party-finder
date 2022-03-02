@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect } from 'react'
 import './NavBar.css';
 import { Link } from "react-router-dom";
 import { D20 } from '../../../assets/index.js';
@@ -10,10 +10,10 @@ import MenuItem from '@mui/material/MenuItem';
 
 export default function NavBar(props) {
 
-  const [username, setUsername] = useState("")
-  useEffect(() => {
-  setUsername(props.currentUser?.username)
-}, [])
+//   const [username, setUsername] = useState("")
+//   useEffect(() => {
+//   setUsername(props.currentUser?.username)
+// }, [])
 
   const [anchorEl, setAnchorEl] = React.useState(null);
   const open = Boolean(anchorEl);
