@@ -26,7 +26,7 @@ export const registerUser = async(registerData) => {
   localStorage.setItem('authToken', resp.data.token)
   api.defaults.headers.common.authorization = `Bearer ${resp.data.token}`
   // const resp = req.data.user
-  return resp.data
+  return resp.data.user
 }
 
 // get users: (index)
